@@ -1,0 +1,13 @@
+version: "3.7"
+
+services:
+
+  rabbitmq:
+    image: rabbitmq:3.12-management
+    hostname: rabbitmq
+    ports:
+      - 5672:5672 # core rabbitmq
+      - 15672:15672 # admin panel rabbitmq
+    environment:
+      - RABBITMQ_DEFAULT_USER="user"
+      - RABBITMQ_DEFAULT_PASS="password"  
