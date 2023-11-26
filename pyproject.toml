@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "kinban-board"
+version = "0.1.0"
+description = ""
+authors = ["Oleg Korshunov <oleg.korshunov3000@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+fastapi = {extras = ["all"], version = "^0.104.1"}
+pika = "^1.3.2"
+
+
+[tool.poetry.group.dev.dependencies]
+black = "^23.11.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
