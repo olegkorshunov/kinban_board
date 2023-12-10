@@ -18,7 +18,7 @@ import src.models as models  # noqa
 
 # this is the Alembic Config object, which provides
 # access to the values within the .ini file in use.
-config = context.config
+config = context.config  # pylint: disable=no-member
 config.set_main_option("sqlalchemy.url", f"{CONFIG.PG_DSN}?async_fallback=True")
 
 # Interpret the config file for Python logging.
