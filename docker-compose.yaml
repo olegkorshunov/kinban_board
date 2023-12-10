@@ -6,9 +6,18 @@ services:
     image: rabbitmq:3.12-management
     hostname: rabbitmq
     ports:
-      - 5672:5672 # core rabbitmq
-      - 8080:15672 # admin panel rabbitmq
+      - 5672:5672
+      - 8080:15672
     environment:
       - RABBITMQ_DEFAULT_USER=user
       - RABBITMQ_DEFAULT_PASS=password
-      
+
+  postgres:
+    image: postgres:15-alpine
+    hostname: postgres
+    ports:
+      - 5432:5432
+    environment:
+      POSTGRES_DB: kinban_board
+      POSTGRES_PASSWORD: password
+      POSTGRES_USER: user
