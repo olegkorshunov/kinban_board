@@ -20,4 +20,4 @@ services:
     environment:
       POSTGRES_USER: user
       POSTGRES_PASSWORD: password
-      POSTGRES_DB: kinban_board
+      POSTGRES_DB: kanban_board
