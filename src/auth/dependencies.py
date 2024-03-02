@@ -4,14 +4,14 @@ from fastapi import Depends, Request
 from jose import JWTError, jwt
 from sqlalchemy import select
 
-from src.auth.auth import async_session_maker
-from src.config import CONFIG
-from src.exceptions import (
+from exceptions import (
     AuthTokenExpier,
     IncorrectTokenFormat,
     TokenAbsent,
     UserDataNotFound,
 )
+from src.auth.auth import async_session_maker
+from src.config import CONFIG
 from src.models.user_account import UserAccount
 
 access_token = "kanban_board_token"

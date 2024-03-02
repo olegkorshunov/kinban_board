@@ -5,9 +5,9 @@ from passlib.context import CryptContext
 from pydantic import EmailStr
 from sqlalchemy import select
 
+from exceptions import IncorrectEmailOrPassword
 from src.config import CONFIG
 from src.database import async_session_maker
-from src.exceptions import IncorrectEmailOrPassword
 from src.models import UserAccount
 
 pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto")

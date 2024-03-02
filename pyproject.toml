@@ -15,6 +15,7 @@ pydantic = "^2.5.2"
 pydantic-settings = "^2.1.0"
 passlib = "^1.7.4"
 python-jose = "^3.3.0"
+fastapi-another-jwt-auth = "^0.1.10"
 
 
 [tool.poetry.group.dev.dependencies]
@@ -23,6 +24,7 @@ autoflake = "^2.2.1"
 flake8 = "^6.1.0"
 isort = "^5.13.0"
 pre-commit = "^3.5.0"
+mypy = "^1.8.0"
 
 [build-system]
 requires = ["poetry-core"]
@@ -46,3 +48,11 @@ line_length = 120
 
 [tool.isort]
 profile = "black"
+
+[tool.mypy]
+# ignore_missing_imports = true
+exclude = [
+    ".idea/",
+    '.venv/',
+    'vscode/*',
+]
